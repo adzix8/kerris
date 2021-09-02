@@ -1,0 +1,173 @@
+/*
+ * Theme Name: Kerris Theme
+ * Description: Zadanie rekrutacyjne dla Kerris
+ * Author: Adam Kanigowski!
+*/
+
+/****** Import SCSS  ******/
+
+@import 'scss/reset', 'scss/vars', 'scss/layout', 'scss/header', 'scss/footer';
+
+/****** Basic styles  ******/
+
+*,
+::after,
+::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+p,
+ul,
+input {
+    font: 16px/20px Helvetica, sans-serif;
+}
+
+body {
+    color: $text-color;
+    background-color: $background-color;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 1rem 0;
+}
+
+h2 {
+    font: 2.5rem/4rem;
+    margin: 2rem 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+span {
+    font: inherit;
+}
+
+strong {
+    font-weight: bold;
+}
+
+main {
+    min-height: 100vh;
+}
+
+button {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+a,
+button {
+    &:focus {
+        outline: 2px solid $background-color;
+    }
+}
+
+.icon {
+    width: auto;
+    height: 1rem;
+    margin-right: $margin-1;
+}
+
+.icon--lg {
+    width: auto;
+    height: 1.5rem;
+    margin-right: $margin-1 * 1.5;
+}
+
+.with-icon {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.btn--block {
+    margin: 0 auto;
+    display: block;
+}
+
+.link {
+    color: $text-color;
+    text-decoration: none;
+    -webkit-transition: color .4s ease-in-out;
+    transition: color .4s ease-in-out;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+.text--right {
+    text-align: right;
+}
+
+.text--light {
+    color: $secondary-color;
+}
+
+.text--center {
+    text-align: center;
+}
+
+.text--center--sm {
+    @media #{$sm-max} {
+        text-align: center;
+    }
+}
+
+.text--lg {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.m-1 {
+    margin: $margin-1;
+}
+
+.mt-1 {
+    margin-top: $margin-1;
+}
+
+.mr-1 {
+    margin-right: $margin-1;
+}
+
+.mb-1 {
+    margin-bottom: $margin-1;
+}
+
+.ml-1 {
+    margin-right: $margin-1;
+}

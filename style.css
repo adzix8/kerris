@@ -1,0 +1,275 @@
+/*
+ * Theme Name: Kerris Theme
+ * Description: Zadanie rekrutacyjne dla Kerris
+ * Author: Adam Kanigowski!
+*/
+/****** Import SCSS  ******/
+/****** Reset CSS  ******/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+body {
+  line-height: 1;
+  color: #000000;
+  background: #ffffff; }
+
+ol, ul {
+  list-style: none; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+/****** Variables  ******/
+/* Breakpoints */
+/* Colors */
+/* Margin & padding */
+/****** Layout  ******/
+/****** Variables  ******/
+/* Breakpoints */
+/* Colors */
+/* Margin & padding */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem; }
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px; } }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+      padding: 0; } }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px; } }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px; } }
+
+.w--100,
+.w--50,
+.w--33,
+.w--25,
+.w--thin {
+  width: 100%;
+  margin-bottom: 1rem; }
+
+@media (min-width: 768px) {
+  .w--50 {
+    width: 50%;
+    padding: 0 1rem; } }
+
+@media (min-width: 768px) {
+  .w--33 {
+    width: 33.33%; } }
+
+@media (min-width: 768px) {
+  .w--25 {
+    width: 25%; } }
+
+@media (min-width: 768px) {
+  .w--thin {
+    width: 60%; } }
+
+@media (max-width: 767px) {
+  .w--50--sm {
+    width: 50%;
+    word-break: break-all; }
+    .w--50--sm:nth-child(odd) {
+      padding-right: 0.5rem; }
+    .w--50--sm:nth-child(even) {
+      padding-left: 0.5rem; } }
+
+.h--100 {
+  height: 100%; }
+
+.section {
+  padding: 4rem 0; }
+
+.container,
+.flex-center,
+.space-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.flex-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.vertical-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.space-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+/****** Header  ******/
+/****** Footer  ******/
+/****** Basic styles  ******/
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body,
+p,
+ul,
+input {
+  font: 16px/20px Helvetica, sans-serif; }
+
+body {
+  color: #000000;
+  background-color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden; }
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin: 1rem 0; }
+
+h2 {
+  font: 2.5rem/4rem;
+  margin: 2rem 0; }
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-bottom: 1rem; }
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem; }
+
+p {
+  margin-bottom: 1rem; }
+
+span {
+  font: inherit; }
+
+strong {
+  font-weight: bold; }
+
+main {
+  min-height: 100vh; }
+
+button {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer; }
+
+a:focus,
+button:focus {
+  outline: 2px solid #ffffff; }
+
+.icon {
+  width: auto;
+  height: 1rem;
+  margin-right: 0.5rem; }
+
+.icon--lg {
+  width: auto;
+  height: 1.5rem;
+  margin-right: 0.75rem; }
+
+.with-icon {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.btn--block {
+  margin: 0 auto;
+  display: block; }
+
+.link {
+  color: #000000;
+  text-decoration: none;
+  -webkit-transition: color .4s ease-in-out;
+  transition: color .4s ease-in-out; }
+  .link:hover {
+    color: #7485a2; }
+
+.text--right {
+  text-align: right; }
+
+.text--light {
+  color: #7485a2; }
+
+.text--center {
+  text-align: center; }
+
+@media (max-width: 767px) {
+  .text--center--sm {
+    text-align: center; } }
+
+.text--lg {
+  font-size: 1.5em;
+  line-height: 1.5em; }
+
+.p-relative {
+  position: relative; }
+
+.m-0 {
+  margin: 0; }
+
+.m-1 {
+  margin: 0.5rem; }
+
+.mt-1 {
+  margin-top: 0.5rem; }
+
+.mr-1 {
+  margin-right: 0.5rem; }
+
+.mb-1 {
+  margin-bottom: 0.5rem; }
+
+.ml-1 {
+  margin-right: 0.5rem; }
+
+/*# sourceMappingURL=style.css.map */
