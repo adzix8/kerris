@@ -86,6 +86,7 @@ class StarterSite extends Timber\Site {
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
 		$context['menu']  = new Timber\Menu();
 		$context['site']  = $this;
+		$context['logo'] = wp_get_attachment_image_url( get_theme_mod( 'custom_logo' ), 'full' );
 		return $context;
 	}
 
@@ -141,6 +142,8 @@ class StarterSite extends Timber\Site {
 		);
 
 		add_theme_support( 'menus' );
+
+		add_theme_support('custom-logo');
 	}
 
 	/** This Would return 'foo bar!'.

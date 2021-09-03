@@ -1,10 +1,12 @@
 /****** Layout  ******/
-@import 'vars';
+@import 'vars', 'mixins';
 .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 0 $padding-2;
+    @include flex;
+    @include flex-wrap;
 
     @media #{$sm-min} {
         max-width: 540px;
@@ -36,7 +38,14 @@
 .w--50 {
     @media #{$md-min} {
         width: 50%;
-        padding: 0 $padding-2;
+
+        &:nth-child(odd) {
+            padding-right: $padding-3;
+        }
+
+        &:nth-child(even) {
+            padding-right: $padding-3;
+        }
     }
 }
 
@@ -81,30 +90,22 @@
     padding: $padding-4 0;
 }
 
-.container,
-.flex-center,
-.space-between {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+.flex {
+    @include flex;
 }
 
-.flex-center {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+.flex--wrap {
+    @include flex-wrap;
 }
 
-.vertical-center {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+.justify--center {
+    @include justify-center;
 }
 
-.space-between {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+.justify--space-between {
+    @include justify-space-between;
+}
+
+.vertical--center {
+    @include align-center;
 }

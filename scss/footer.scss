@@ -1,4 +1,19 @@
 /****** Footer  ******/
+@import 'vars', 'mixins';
 .footer {
+  color: $text-light-color;
+  @include justify-space-between;
+  @include align-center;
+  margin-bottom: $margin-3;
 
+  @media #{$sm-max} {
+    flex-direction: column-reverse;
+
+  }
+
+  .circles__container {
+    @media #{$sm-max} {
+      margin: 0 auto $margin-2;
+    }
+  }
 }

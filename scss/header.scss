@@ -1,1 +1,16 @@
 /****** Header  ******/
+@import 'vars', 'mixins';
+.header {
+  background-color: $background-color;
+
+  &__bar {
+    height: 70px;
+    @include flex();
+    @include align-center;
+    overflow: hidden;
+  }
+  &__logo {
+    width: auto;
+    height: 39px;
+  }
+}
