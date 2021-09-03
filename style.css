@@ -396,6 +396,11 @@ button:focus {
   padding: 14px 110px;
   display: inline-block;
   transition: transform .4s ease-in-out; }
+  @media (max-width: 767px) {
+    .btn {
+      text-align: center;
+      width: 100%;
+      padding: 14px 50px; } }
   .btn--primary {
     color: #ffffff;
     background-color: #6C7de3; }
