@@ -214,6 +214,9 @@ blockquote, q {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body,
 p,
 ul,
@@ -389,7 +392,9 @@ button:focus {
 .btn {
   font: 18px/27px Poppins-SemiBold, sans-serif;
   text-transform: uppercase;
+  text-decoration: none;
   padding: 14px 110px;
+  display: inline-block;
   transition: transform .4s ease-in-out; }
   .btn--primary {
     color: #ffffff;
@@ -431,7 +436,8 @@ button:focus {
   @media (max-width: 767px) {
     .hero__section {
       height: auto;
-      padding: 4rem 0; } }
+      padding: 4rem 0;
+      overflow-x: clip; } }
   .hero__section .circles__container {
     margin-left: -70px;
     position: absolute;
@@ -457,8 +463,8 @@ button:focus {
   font: 60px/83px Poppins-Regular, sans-serif; }
   @media (max-width: 767px) {
     .hero__header {
-      font-size: 36px;
-      line-height: 44px; } }
+      font-size: 42px;
+      line-height: 50px; } }
 .hero__description {
   margin-bottom: 4rem; }
 .hero__image {
@@ -477,6 +483,10 @@ button:focus {
 .section__header {
   font: 60px/83px Poppins-SemiBold, sans-serif;
   margin-bottom: 2rem; }
+  @media (max-width: 767px) {
+    .section__header {
+      font-size: 42px;
+      line-height: 50px; } }
 
 .separator {
   background-color: #ffc625;
@@ -494,6 +504,10 @@ button:focus {
     padding: 1.5rem 0 0 4rem;
     margin-bottom: 1rem;
     position: relative; }
+    @media (max-width: 767px) {
+      .article__header {
+        line-height: 44px;
+        padding-left: 1rem; } }
   .article:nth-child(even) .article__header::before, .article:nth-child(odd) .article__header::before {
     content: url("assets/img/head_1.svg");
     position: absolute;
@@ -509,7 +523,14 @@ button:focus {
     position: absolute;
     top: 0;
     right: 2rem; }
+    @media (max-width: 767px) {
+      .article__img {
+        padding: 0;
+        right: 0; } }
   .article__content {
     padding-left: 6rem; }
+    @media (max-width: 767px) {
+      .article__content {
+        padding-left: 3rem; } }
 
 /*# sourceMappingURL=style.css.map */

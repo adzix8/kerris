@@ -32,6 +32,10 @@
     @include border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body,
 p,
 ul,
@@ -259,7 +263,9 @@ button {
 .btn {
     font: 18px/27px Poppins-SemiBold, sans-serif;
     text-transform: uppercase;
+    text-decoration: none;
     padding: 14px 110px;
+    display: inline-block;
     transition: transform .4s ease-in-out;
 
     &--primary {
@@ -310,6 +316,7 @@ button {
         @media #{$sm-max} {
             height: auto;
             padding: $padding-4 0;
+            overflow-x: clip;
         }
 
         .circles__container {
@@ -344,8 +351,8 @@ button {
         font: 60px/83px Poppins-Regular, sans-serif;
 
         @media #{$sm-max} {
-            font-size: 36px;
-            line-height: 44px;
+            font-size: 42px;
+            line-height: 50px;
         }
     }
 
@@ -375,6 +382,11 @@ button {
     &__header{
         font: 60px/83px Poppins-SemiBold, sans-serif;
         margin-bottom: 2rem;
+
+        @media #{$sm-max} {
+            font-size: 42px;
+            line-height: 50px;
+        }
     }
 }
 
@@ -396,6 +408,11 @@ button {
         padding: 1.5rem 0 0 4rem;
         margin-bottom: $margin-2;
         position: relative;
+
+        @media #{$sm-max} {
+            line-height: 44px;
+            padding-left: 1rem;
+        }
     }
 
     &:nth-child(even), &:nth-child(odd)  {
@@ -421,9 +438,18 @@ button {
         position: absolute;
         top: 0;
         right: 2rem;
+
+        @media #{$sm-max} {
+            padding: 0;
+            right: 0;
+        }
     }
 
     &__content {
         padding-left: 6rem;
+
+        @media #{$sm-max} {
+            padding-left: 3rem;
+        }
     }
 }

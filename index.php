@@ -13,10 +13,18 @@
  * @since   Timber 0.1
  */
 
+$query = [
+    'post_type' => 'hero',
+    'order-by' => 'date',
+    'order' => 'DESC',
+    'no_found_rows' => true,
+];
+
 $context          = Timber::context();
 $context['posts'] = new Timber\PostQuery();
 $context['foo']   = 'bar';
 $templates        = array( 'index.twig' );
+$context['hero']  = Timber::get_posts( $query );
 if ( is_home() ) {
 	array_unshift( $templates, 'front-page.twig', 'home.twig' );
 }

@@ -168,3 +168,55 @@ class StarterSite extends Timber\Site {
 }
 
 new StarterSite();
+
+/**
+ * Class Hero - section for homepage
+ */
+class Hero {
+    public function __construct()
+    {
+        add_action('init', [$this, 'heroRegister']);
+        add_filter('manage_edit-hero_columns', [$this,'heroEditColumns']);
+        add_action('manage_posts_custom_column', [$this, 'heroColumns']);
+    }
+
+    public function heroRegister()
+    {
+        register_post_type( 'hero' , [
+            'label' => __('Hero'),
+            'public' => true,
+            'show_ui' => true,
+            'capability_type' => 'post',
+            'hierarchical' => false,
+            'rewrite' => true,
+            'supports' => ['title', 'thumbnail', 'editor'],
+        ]);
+    }
+
+    /**
+     * @return array
+     */
+    public function heroEditColumns(): array
+    {
+        return [
+            'cb' => '<input type="checkbox">',
+            'title' => __('Tytuł'),
+            'post_content' => __('Opis'),
+            'thumbnail' => __('Obraz'),
+            'date' => __('Data'),
+        ];
+    }
+
+    public function heroColumns($column) {
+        switch ($column) {
+            case 'post_content':
+                echo get_the_content();
+                break;
+            case 'thumbnail':
+                echo get_the_post_thumbnail(null,'thumbnail');
+                break;
+        }
+    }
+}
+
+ new Hero();

@@ -1,0 +1,21 @@
+{% block content %}
+	<section class="hero__section">
+		<div class="container">
+			<div class="w--50">
+				<h2 class="hero__header">{{ post.title }}</h2>
+				<p class="hero__description">{{ post.post_content }}</p>
+				<a class="btn btn--primary btn--with-arrow-down" href="#posts">Learn more</a>
+			</div>
+		</div>
+		<div class="lines"></div>
+		<div class="circles__container">
+			<span class="circles__item"></span>
+			<span class="circles__item"></span>
+			<span class="circles__item"></span>
+			<span class="circles__item"></span>
+		</div>
+		<div class="hero__image-container">
+			<img class="hero__image" src="http://localhost/kerris/wp-content/uploads/2021/09/photo.jpg" alt="Hero Image">
+		</div>
+	</section>
+{% endblock %}
